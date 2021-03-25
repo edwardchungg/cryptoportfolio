@@ -58,7 +58,9 @@ const update = () => {
     getData("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cethereum&vs_currencies=usd").then(data => {
     console.log(data);
     localStorage.setItem("bitcoin-currentvalue", data.bitcoin.usd);
+    document.getElementById("bitcoin").innerText = localStorage.getItem("bitcoin-currentvalue");
     localStorage.setItem("ether-currentvalue", data.ethereum.usd);
+    document.getElementById("ether").innerText = localStorage.getItem("ether-currentvalue");
     })
     .catch((error) => {
     console.log("error" + error);
