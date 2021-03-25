@@ -1,0 +1,35 @@
+body{
+
+    
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    text-align: center;
+}
+
+.header{
+    margin: auto;
+    text-align: center;
+}
+
+
+h1{
+    color: black;
+    font-size: 50px;
+    
+}
+.portfolioContainer{
+    display: inline;
+}
+.totalPortfolio{
+}
+.col{
+    border-radius: 25px;
+  border: 2px solid grey;
+  padding: 20px;
+  margin: 5px;
+}
+
+.inline-text{
+    display: inline-block;
+    vertical-align: top;
+}

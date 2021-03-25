@@ -1,0 +1,70 @@
+<html <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Crypto Portfolio</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">   
+    </head>
+    <body>
+        <div class="header">
+            <h1> My Crypto Portfolio </h1>
+        </div>
+        <div class="container">
+
+        <h2 id="portfolio">Total Portfolio Value: <span id="totalPortfolio"></span></h2>
+        <h2>Total Cost: $<span id="cost"></span></h2> 
+        <h2>Profit: <span id="profit"></span></h2>
+        <div class="row">
+            <div class="col" id="Bitcoin Container">                
+                    <h3>Bitcoin</h3>
+                    <img src="https://logos-world.net/wp-content/uploads/2020/08/Bitcoin-Logo.png" style="height: 50px">
+                        <p>Last Price: $<span id="bitcoin"></span></p>
+                        <p>Quantity owned: <span id="bitcoin-owned"></span></p>
+                        <p>Average Cost: $<span id="bitcoin-cost"></span></p>
+                        <p>Total Cost: $<span id="bitcoin-totalCost"></span></p>
+                        <p>Equity: $<span id="bitcoin-value"></span></p>
+                        <h3>Gain/Loss: <span id="bitcoin-gain"></span></h3></h3>
+            </div>
+            <div class="col" id="Ethereum Container">
+                <h3>Ethereum</h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ethereum-icon-purple.svg/1200px-Ethereum-icon-purple.svg.png" style="height: 50px">
+                <p>Last Price: $<span id="ether"></span></p>
+                <p>Quantity owned: <span id="ether-owned"></span></p>
+                <p>Average Cost: $<span id="ether-cost"></span></p>
+                <p>Total Cost: $<span id="ether-totalCost"></span></p>
+                <p>Equity: $<span id="ether-value"></span></p>
+                <h3>Gain/Loss: <span id="ether-gain"></span></h3>
+            </div>           
+            </div>
+            <div class="row">
+                <form class="col" id="amount-form" onsubmit="updateQuantityCost()">
+                    <h3>Update Portfolio Form</h3>
+                    <label for="form-bitcoin-amount">Bitcoin Amount:</label><br>
+                    <input placeholder="Bitcoin Amount:" id="form-bitcoin-amount"><br>
+                    <label for="form-bitcoin-cost">Bitcoin Average Cost:</label><br>
+                    <input placeholder="Bitcoin Cost:" id="form-bitcoin-cost"><br>
+                    <label for="form-ether-amount">Ethereum Amount:</label><br>
+                    <input placeholder="Ethereum Amount:" id="form-ether-amount"><br>
+                    <label for="form-ether-cost">Ethereum Average Cost:</label><br>
+                    <input placeholder="Ethereum Cost:" id="form-ether-cost"><br>
+                    <button class="btn btn-dark">Update</button>
+                    <button class="btn btn-danger" onclick="reset()">Reset </button>
+                </form>
+                    
+            </div>
+
+        </div>
+        
+        <script src="script.js" async defer></script>
+    </body>
+</html>
