@@ -25,6 +25,7 @@
         <h2 id="portfolio">Total Portfolio Value: <span id="totalPortfolio"></span></h2>
         <h2>Total Cost: $<span id="cost"></span></h2> 
         <h2>Profit: <span id="profit"></span></h2>
+        
         <div class="row">
             <div class="col" id="Bitcoin Container">                
                     <h3>Bitcoin</h3>
@@ -48,20 +49,22 @@
             </div>           
             </div>
             <div class="row">
-                <form class="col" id="amount-form" onsubmit="updateQuantityCost()">
-                    <h3>Update Portfolio Form</h3>
-                    <label for="form-bitcoin-amount">Bitcoin Amount:</label><br>
-                    <input placeholder="Bitcoin Amount:" id="form-bitcoin-amount"><br>
-                    <label for="form-bitcoin-cost">Bitcoin Average Cost:</label><br>
-                    <input placeholder="Bitcoin Cost:" id="form-bitcoin-cost"><br>
-                    <label for="form-ether-amount">Ethereum Amount:</label><br>
-                    <input placeholder="Ethereum Amount:" id="form-ether-amount"><br>
-                    <label for="form-ether-cost">Ethereum Average Cost:</label><br>
-                    <input placeholder="Ethereum Cost:" id="form-ether-cost"><br>
-                    <button class="btn btn-dark">Update</button>
-                    <button class="btn btn-danger" onclick="reset()">Reset </button>
-                </form>
-                    
+                <div class="col">
+                    <form id="amount-form" onsubmit="updateQuantityCost()">
+                        <h3>Update Portfolio Form</h3>
+                        <label for="form-bitcoin-amount">Bitcoin Amount:</label><br>
+                        <input placeholder="Bitcoin Amount:" id="form-bitcoin-amount"><br>
+                        <label for="form-bitcoin-cost">Bitcoin Average Cost:</label><br>
+                        <input placeholder="Bitcoin Cost:" id="form-bitcoin-cost"><br>
+                        <label for="form-ether-amount">Ethereum Amount:</label><br>
+                        <input placeholder="Ethereum Amount:" id="form-ether-amount"><br>
+                        <label for="form-ether-cost">Ethereum Average Cost:</label><br>
+                        <input placeholder="Ethereum Cost:" id="form-ether-cost"><br>
+                        <button class="btn btn-dark">Update</button>
+                        
+                    </form>
+                    <button class="btn btn-danger" onclick="reset()">Reset</button>
+                </div>    
             </div>
 
         </div>

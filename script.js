@@ -9,10 +9,31 @@ const updateQuantityCost= () => {
     localStorage.setItem("bitcoin-cost", 29621.95);
     localStorage.setItem("ether-cost", 1101.17);
     */
+   
+    if ((document.getElementById("form-bitcoin-amount").value) != ""){
+        console.log(document.getElementById("form-bitcoin-amount").value);
+        localStorage.setItem("bitcoin-amount", document.getElementById("form-bitcoin-amount").value);
+        console.log("form-bitconi-amount is not empty");
+    }
+    if (((document.getElementById("form-bitcoin-cost").value)) != ""){
+        localStorage.setItem("bitcoin-cost", document.getElementById("form-bitcoin-cost").value);
+        console.log("form-bitcoin-cost is not empty");
+    }
+    if (((document.getElementById("form-ether-amount").value)) != ""){
+        localStorage.setItem("ether-amount", document.getElementById("form-ether-amount").value);
+        console.log("form-ether-amount is not empty");
+    }
+    if (((document.getElementById("form-ether-cost").value)) != ""){
+        localStorage.setItem("ether-cost", document.getElementById("form-ether-cost").value);
+        console.log("form-ether-cost is not empty");
+    }
+    
+    /*
     localStorage.setItem("bitcoin-amount", document.getElementById("form-bitcoin-amount").value);
     localStorage.setItem("bitcoin-cost", document.getElementById("form-bitcoin-cost").value);
     localStorage.setItem("ether-amount", document.getElementById("form-ether-amount").value);
     localStorage.setItem("ether-cost", document.getElementById("form-ether-cost").value);
+    */
 }
 
 const declarelocalStorageValues = () => {
